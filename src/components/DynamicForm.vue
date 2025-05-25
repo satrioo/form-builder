@@ -221,6 +221,7 @@ const clearForm = () => {
                 v-model="formData[field.model]"
                 :placeholder="field.placeholder"
                 :required="field.required"
+                rows="4"
                 @blur="touched[field.model] = true"
                 :class="[
                   'w-full rounded-lg border p-2.5 text-sm focus:outline-none',

@@ -1,10 +1,7 @@
-<script setup lang="ts">
-import Navbar from './components/Navbar.vue'
-</script>
-
 <template>
-  <Navbar />
-  <router-view />
+  <div class="py-12 bg-gray-400 min-h-screen">
+    <router-view />
+  </div>
 </template>
 
 <style scoped>
