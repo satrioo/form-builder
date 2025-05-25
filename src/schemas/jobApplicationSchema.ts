@@ -109,4 +109,4 @@ export const jobApplicationSchema = {
       required: true,
     },
   ],
-} as const;
+};

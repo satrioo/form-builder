@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue";
+import type { PropType } from "vue";
 import Result from "./Result.vue";
 
 interface Field {
@@ -15,14 +16,17 @@ interface Field {
   fields?: Field[];
 }
 
-const props = defineProps<{
-  schema: {
-    title: string;
-    description?: string;
-    fields: Field[];
-  };
-}>();
 
+const props = defineProps({
+  schema: {
+    type: Object as PropType<{
+      title: string;
+      description?: string;
+      fields: Field[];
+    }>,
+    required: true,
+  },
+});
 const formData = reactive<Record<string, any>>({});
 const touched = reactive<Record<string, any>>({});
 const isSubmited = ref(false)
