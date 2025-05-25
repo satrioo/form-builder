@@ -6,4 +6,3 @@ import { jobApplicationSchema } from '../schemas/jobApplicationSchema.ts'
 <template>
   <DynamicForm :schema="jobApplicationSchema" />
 </template>
-../dsad

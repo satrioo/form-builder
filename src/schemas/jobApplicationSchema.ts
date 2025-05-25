@@ -18,6 +18,9 @@ export const jobApplicationSchema = {
       model: "email",
       required: true,
       placeholder: "john@example.com",
+      validation: {
+        email: true,
+      },
     },
     {
       type: "tel",
@@ -25,6 +28,9 @@ export const jobApplicationSchema = {
       model: "phone",
       required: true,
       placeholder: "+1 555-1234",
+      validation: {
+        number: true,
+      },
     },
     {
       type: "select",
@@ -74,19 +80,25 @@ export const jobApplicationSchema = {
           type: "text",
           label: "Street",
           model: "street",
+          placeholder: "Street",
           required: true,
         },
         {
           type: "text",
           label: "City",
           model: "city",
+          placeholder: "City",
           required: true,
         },
         {
           type: "text",
           label: "Postal Code",
           model: "postalCode",
+          placeholder: "Postal Code",
           required: true,
+          validation: {
+            number: true,
+          },
         },
       ],
     },
@@ -97,4 +109,4 @@ export const jobApplicationSchema = {
       required: true,
     },
   ],
-} as const
+} as const;
